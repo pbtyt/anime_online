@@ -18,13 +18,13 @@ const Header = () => {
         <img src={weblogo} alt="weblogo"/>
 
         <ul className={styles.links}>
-            <Link to="/releases" className={`${styles.link} ${activeIndex === 0 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(0)}>
+            <Link to="/anime_online/releases" className={`${styles.link} ${activeIndex === 0 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(0)}>
                 Releases
             </Link>
-            <Link to="/schedule" className={`${styles.link} ${activeIndex === 1 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(1)}>
+            <Link to="/anime_online/schedule" className={`${styles.link} ${activeIndex === 1 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(1)}>
                 Schedule
             </Link>
-            <Link to="/team" className={`${styles.link} ${activeIndex === 2 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(2)}>
+            <Link to="/anime_online/team" className={`${styles.link} ${activeIndex === 2 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(2)}>
                 Team
             </Link>
         </ul>
