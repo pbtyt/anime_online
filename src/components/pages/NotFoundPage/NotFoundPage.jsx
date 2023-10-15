@@ -22,7 +22,7 @@ const NotFoundPage = () => {
             <div className={styles.buttons}>
                 <DefaultButton buttonText={"Back"}/>
                 
-                <Link to="/">
+                <Link to="/anime_online/">
                     <DefaultButton buttonText={"Home"}/>
                 </Link>
 
