@@ -11,7 +11,7 @@ import Layout from './Layout'
 const Router = () => {
 	return <BrowserRouter>
 		<Routes>
-			<Route path="/" element={<Layout/>}>
+			<Route path="/anime_online/" element={<Layout/>}>
 				<Route index element={<ReleasesPage/>}/>
 				<Route path="schedule" element={<SchedulePage/>}/>
 				<Route path="profile" element={<ProfilePage/>}/>
