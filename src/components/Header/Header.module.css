@@ -12,6 +12,21 @@
     align-items: center;
 }
 
+.linksWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.menuToggle{
+    display: none;
+
+    padding: 10px 10px;
+    background: #2d2d2d;
+    color: #dbdbdb;
+
+    flex-shrink: 1;
+}
+
 .links > *{
     display: inline-block;
 }
@@ -55,6 +70,14 @@
 
     .headerWrapper > *:not(img){
         width: 100%;
+    }
+
+    .menuToggle{
+        display: block;
+    }
+
+    .hiddenMenu.links{
+        display: none;
     }
 
     .links{

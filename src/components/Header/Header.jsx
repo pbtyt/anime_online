@@ -12,22 +12,26 @@ import weblogo from '../../assets/images/logo.jpg'
 
 const Header = () => {
     const [activeIndex, setActiveIndex] = useState(0)
+    const [isVisibleMenu, setIsVisibleMenu] = useState(false)
 
   return (
     <div className={styles.headerWrapper}>
         <img src={weblogo} alt="weblogo"/>
 
-        <ul className={styles.links}>
-            <Link to="/anime_online/releases" className={`${styles.link} ${activeIndex === 0 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(0)}>
-                Releases
-            </Link>
-            <Link to="/anime_online/schedule" className={`${styles.link} ${activeIndex === 1 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(1)}>
-                Schedule
-            </Link>
-            <Link to="/anime_online/team" className={`${styles.link} ${activeIndex === 2 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(2)}>
-                Team
-            </Link>
-        </ul>
+        <div className={styles.linksWrapper}>
+            <button className={styles.menuToggle} onClick={()=>setIsVisibleMenu(!isVisibleMenu)}>Menu</button>
+            <ul className={`${styles.links} ${isVisibleMenu ? "" : styles.hiddenMenu}`}>
+                <Link to="/anime_online/releases" className={`${styles.link} ${activeIndex === 0 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(0)}>
+                    Releases
+                </Link>
+                <Link to="/anime_online/schedule" className={`${styles.link} ${activeIndex === 1 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(1)}>
+                    Schedule
+                </Link>
+                <Link to="/anime_online/team" className={`${styles.link} ${activeIndex === 2 ? styles.activeLink: ""}`} onClick={()=>setActiveIndex(2)}>
+                    Team
+                </Link>
+            </ul>
+        </div>
 
         <div className={styles.leftHeader}>
             <Input/>
