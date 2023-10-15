@@ -1,0 +1,19 @@
+.button{
+    background: #fe3635;
+    transition: all 300ms ease;
+}
+
+.button:hover{
+    background: #c72d2d;
+    
+}    
+
+.button:active{
+    background: #912524;
+    color: #dbdbdb;
+}
+
+.button:disabled{
+    background: #8c8c8c;
+    color: #c5c5c5;
+}

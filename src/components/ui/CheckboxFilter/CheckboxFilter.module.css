@@ -1,0 +1,10 @@
+.genreFilterWrapper{
+    display: flex;
+    gap: 8px;
+    color: #dbdbdb;
+    align-items: center;
+}
+
+.genreText{
+    font-size: 14px;
+}

@@ -1,0 +1,33 @@
+.dropdown{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu{
+	list-style-type: none;
+	margin: 5px 0;
+
+	border: 3px solid #101010;
+
+	width: 150px;
+}
+
+.menu > li{
+	padding: 5px;
+	background-color: #222222;
+}
+
+.menu > li:hover{
+	background-color: #4c4c4c;
+}
+
+.menu > li > button{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: none;
+	border: none;
+	padding: 5px;
+	margin: 0;
+}

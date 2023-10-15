@@ -1,0 +1,27 @@
+.popupWrapper{
+	height: 100%;
+	width: 100%;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	
+	background: rgba(0,0,0,.7);
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.popupContent{
+	width: 50%;
+	height: 75%;
+	
+	background: #161616;
+	border-radius: 10px;
+
+	padding: 35px;
+
+	display: flex;
+}

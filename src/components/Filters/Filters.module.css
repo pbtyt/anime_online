@@ -1,0 +1,60 @@
+.filterWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.CategoryWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.genresFilterWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.genresFilterWrapper > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.showAllButton{
+    width: 100%;
+    border-radius: 5px;
+    background: #2d2d2d;
+    color: #8c8c8c;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.yearInputsWrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.yearInput{
+    width: 50%;
+    background: #2d2d2d;
+    color: #8c8c8c;
+    padding-left: 0px;
+    padding: 10px;
+}
+
+.statusFilterWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 11px
+}
+
+.buttons > *{
+    width: 50%;
+}

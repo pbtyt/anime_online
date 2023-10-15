@@ -1,0 +1,27 @@
+.contentWrapper{
+    display: flex;
+    gap: 30px;
+}
+
+.animeCatalog{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+.recentUpdates{
+    padding: 20px;
+    background: #161616;
+    border-radius: 10px;
+}
+
+.recentUpdates h5{
+    padding-bottom: 20px;
+}
+
+.catalogWrapper{
+    padding: 15px;
+    background: #161616;
+    border-radius: 10px;
+}

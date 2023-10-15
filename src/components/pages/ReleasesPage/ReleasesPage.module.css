@@ -1,0 +1,24 @@
+.contentWrapper{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.filters{
+    padding: 17px;
+    background: #161616;
+    border-radius: 10px;
+
+    max-width: 334px;
+    max-height: 444px;
+}
+
+.catalogWrapper{
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .filters{
+        display: none;
+    }
+}

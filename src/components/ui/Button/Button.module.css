@@ -1,0 +1,16 @@
+.button{
+    background: transparent ;
+    color: #dbdbdb;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.button:hover{
+    outline: 1.95px solid #4bb769; 
+    background: #1a231c;
+}
+
+.activeButton{
+    outline: 1.95px solid #4bb769; 
+    background: #1a231c;
+}

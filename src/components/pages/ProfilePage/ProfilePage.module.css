@@ -1,0 +1,102 @@
+.profileBannerImg{
+	margin-top: 20px;
+
+	width: 100%;
+	height: 190px;
+	background: #4d4d4d;
+}
+
+.profileBannerImg img{
+	width: 100%;
+	height: 100%;
+
+	filter: brightness(40%);
+}
+
+.profileWrapper{
+	padding: 15px;
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.profileCard{
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+
+	border-radius: 10px;
+	background: #161616;
+	width: 220px;
+	height: 255px;
+
+	transform: translateY(-60px);
+}
+
+.profileIcon{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.profileNickname{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.profileRole{
+	background: #4bb769;
+	padding: 3px 15px;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: 400;
+}
+
+.profileLinks{
+	/*Margin чтобы прижать к низу(может есть другой вариант😒)*/
+	margin-top: 55px;
+	display: flex;
+	gap: 15px;
+}
+
+.profileLinkButton{
+	display: flex;
+	justify-content: center;
+	border-radius: 5px;
+
+	padding: 5px;
+	background: #2d2d2d;
+}
+
+.profileLinkIcon{
+	width: 24px;
+	height: 24px;
+}
+
+.profileWatchList{
+	background: #161616;
+	border-radius: 10px;
+
+	flex-grow: 1;
+
+	padding: 20px;
+}
+
+.WatchListCategoryButtons{
+	display: flex;
+	gap: 35px;
+
+	border-bottom: 1px solid #2d2d2d;
+}
+
+.CategoryButton{
+	padding: 9px 0px;
+
+}
+
+.activeCategory{
+	border-bottom: 1.5px solid #dbdbdb;
+	border-radius: 1px;
+}

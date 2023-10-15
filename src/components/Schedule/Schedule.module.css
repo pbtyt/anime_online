@@ -1,0 +1,13 @@
+.buttonsWrapper{
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+    background: #161616;
+    border-radius: 10px;
+}
+
+.buttonsWrapper > * {
+    padding: 15px 40px;
+    margin: 5px;
+}

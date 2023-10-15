@@ -1,0 +1,27 @@
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #4c4c4c;
+    background-color: #161616;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+input[type="checkbox"]:checked {
+    background-color: #4bb769;
+    border: none;
+}
+
+input[type="checkbox"]:checked::after {
+content: "\2713"; /* использование символа галочки */
+color: #fafff7; /* цвет галочки */
+font-size: 15px; /* размер галочки */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); /* центрирование галочки */
+}
+  
