@@ -4,8 +4,8 @@ import { useSearchParams } from 'react-router-dom'
 
 import styles from './SearchPage.module.css'
 
-import AnimeCard from '../../ui/AnimeCard/AnimeCard'
-import AnimeCardSkeleton from '../../ui/AnimeCard/AnimeCardSkeleton'
+import AnimeCard from '../../components/ui/AnimeCard/AnimeCard'
+import AnimeCardSkeleton from '../../components/ui/AnimeCard/AnimeCardSkeleton'
 
 
 const SearchPage = () => {

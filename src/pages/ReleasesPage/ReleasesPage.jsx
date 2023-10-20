@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './ReleasesPage.module.css'
 
-import AnimeCatalog from '../../AnimeCatalog/AnimeCatalog'
-import Filters from '../../Filters/Filters'
+import AnimeCatalog from '../../components/AnimeCatalog/AnimeCatalog'
+import Filters from '../../components/Filters/Filters'
 
 const ReleasesPage = () => {
   return (

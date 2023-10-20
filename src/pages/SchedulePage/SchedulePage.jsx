@@ -1,10 +1,10 @@
 import React from 'react'
 import styles from './SchedulePage.module.css'
 
-import Header from '../../Header/Header'
-import RecentUpdates from '../../RecentUpdates/RecentUpdates'
-import Schedule from '../../Schedule/Schedule'
-import AnimeCatalog from '../../AnimeCatalog/AnimeCatalog'
+import Header from '../../components/Header/Header'
+import RecentUpdates from '../../components/RecentUpdates/RecentUpdates'
+import Schedule from '../../components/Schedule/Schedule'
+import AnimeCatalog from '../../components/AnimeCatalog/AnimeCatalog'
 
 const SchedulePage = () => {
   return (

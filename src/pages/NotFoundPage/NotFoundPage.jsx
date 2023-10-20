@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import styles from './NotFoundPage.module.css'
-import notFound from '../../../assets/images/notfoundbanner.jpg'
+import notFound from '../../assets/images/notfoundbanner.jpg'
 
-import DefaultButton from '../../ui/DefaultButton/DefaultButton'
+import DefaultButton from '../../components/ui/DefaultButton/DefaultButton'
 
 const NotFoundPage = () => {
   return (

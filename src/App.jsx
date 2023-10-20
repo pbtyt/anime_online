@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 
 import Header from './components/Header/Header'
-import SchedulePage from './components/pages/SchedulePage/SchedulePage'
-import ReleasesPage from './components/pages/ReleasesPage/ReleasesPage'
-import ProfilePage from './components/pages/ProfilePage/ProfilePage'
-import NotFoundPage from './components/pages/NotFoundPage/NotFoundPage'
+import SchedulePage from './pages/SchedulePage/SchedulePage'
+import ReleasesPage from './pages/ReleasesPage/ReleasesPage'
+import ProfilePage from './pages/ProfilePage/ProfilePage'
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
 
 import styles from './App.module.css'
 

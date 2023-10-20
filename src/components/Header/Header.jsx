@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import isMobileView from '../../utils/isMobileView'
+
 import styles from './Header.module.css'
 
 import Input from '../ui/Input/Input'
@@ -13,7 +15,7 @@ import weblogo from '../../assets/images/logo.jpg'
 const Header = () => {
     const [activeIndex, setActiveIndex] = useState(0)
     const [isVisibleMenu, setIsVisibleMenu] = useState(false)
-
+    console.log(isMobileView()); //detect mobile view for new mobile design 
   return (
     <div className={styles.headerWrapper}>
         <img src={weblogo} alt="weblogo"/>
@@ -36,7 +38,7 @@ const Header = () => {
         <div className={styles.leftHeader}>
             <Input/>
             <img src={NotifySvg} alt=""/>
-            <Link to="/profile">
+            <Link to="/anime_online/profile">
                 <div className={styles.userIcon}>
                     <img src={avatar} alt="avatar"/>
                 </div>

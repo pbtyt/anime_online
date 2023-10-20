@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './ProfilePage.module.css'
 
-import banner from '../../../assets/images/jjkbanner.jpg'
-import icon from '../../../assets/images/jjkava.jpg'
+import banner from '../../assets/images/jjkbanner.jpg'
+import icon from '../../assets/images/jjkava.jpg'
 
-import telegram from '../../../../public/telegramicon.svg'
+import telegram from '/public/telegramicon.svg'
 
-import AnimeCatalog from '../../AnimeCatalog/AnimeCatalog'
+import AnimeCatalog from '../../components/AnimeCatalog/AnimeCatalog'
 
 const ProfilePage = () => {
   return (
