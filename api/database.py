@@ -30,14 +30,15 @@ class Database():
       all_anime = self.get_all_anime_by_genre(genres, q_filter, limit, offset)
       return all_anime
 
-    q_filter = q_filter.split(",")
+    # q_filter = q_filter.split(",") ----> OLD SOLUTION
 
     found_anime = db.child("anime").get().each()[offset:][:limit] 
     all_anime = []
     if q_filter != "":
       for anime in found_anime:
-        try:
-          all_anime.append({current_filter: anime.val()[current_filter] for current_filter in q_filter})
+        try: 
+          # all_anime.append({current_filter: anime.val()[current_filter] for current_filter in q_filter}) ---> OLD SOLUTION
+          all_anime.append(data_filter(anime.val(), q_filter))
         except KeyError:
           print(f"Нет одного из ключей у аниме: {anime.key()}")
     else:
