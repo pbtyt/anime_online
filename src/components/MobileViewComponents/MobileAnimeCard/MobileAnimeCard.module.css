@@ -1,14 +1,19 @@
 .cardWrapper{
-    max-height: 250px;
+    box-sizing: initial;
+    max-height: 170px;
     margin-bottom: 20px;
-    background: black;
-
+    /* background: #121111; */
+    background-color: #0e0e0e;
+    padding: 9px;
+    border-radius: 10px;
     display: flex;
     gap: 2rem;
 }
 
 .cardPoster{
     border-radius: 10px;
+    width: 120px;
+    height: 170px;
 }
 
 .cardInfo{
@@ -18,9 +23,23 @@
     gap: .3rem;
 }
 
+.cardTitle{
+    color: #dbdbdb;
+}
+
+.cardEpisodeCount{
+    color: #8c8c8c;
+}
+
 .cardDescription{
+    margin-top: .5rem;
     display: inline-block;
     overflow-y: scroll;
-    color: white;
+    color: #c5c5c5;
     font-size: 13px;
+}
+
+.cardDescription::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
 }

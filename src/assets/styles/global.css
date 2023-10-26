@@ -63,8 +63,16 @@ h1,h2,h3,h4,h5,h6{
   background: #555;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px){
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+  body{
+      padding: 15px;
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
     body{
-        padding: 22px;
+        padding: 5px;
     }
 }

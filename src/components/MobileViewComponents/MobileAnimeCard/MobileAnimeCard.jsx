@@ -12,9 +12,9 @@ const MobileAnimeCard = ({ animeInfo }) => {
             <h2 className={styles.cardTitle}>
                 {animeInfo.title}
             </h2>
-            <h5 className={styles.cardEpisodeCount}>
+            <h6 className={styles.cardEpisodeCount}>
                 {animeInfo.episode_count} episodes
-            </h5>
+            </h6>
             <p className={styles.cardDescription}>
                 {animeInfo.description}
             </p>
