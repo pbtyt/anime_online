@@ -9,7 +9,8 @@
 .profileBannerImg img{
 	width: 100%;
 	height: 100%;
-
+	object-fit: cover;
+	object-position: center;
 	filter: brightness(40%);
 }
 
@@ -99,4 +100,18 @@
 .activeCategory{
 	border-bottom: 1.5px solid #dbdbdb;
 	border-radius: 1px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+	.profileWrapper{
+		padding: 10px;
+	}
+
+	.profileWatchList{
+		padding: 10px;
+	}
+
+	.profileCard{
+		padding: 10px;
+	}
 }
