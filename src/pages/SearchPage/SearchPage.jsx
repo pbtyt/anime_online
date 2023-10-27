@@ -19,7 +19,7 @@ const SearchPage = () => {
         setIsLoading(true)
         const fetchData = async () => {
             try{
-                const response = await fetch(`http://localhost:8000/v1/title/search?title=${searchQuery}&q_filter=title,poster,episode_count,genres&limit=0`)
+                const response = await fetch(`https://apiv2-sepia.vercel.app/v1/title/search?title=${searchQuery}&q_filter=title,poster,episode_count,genres&limit=0`)
                 const data = await response.json()
 
                 setAnime(data)

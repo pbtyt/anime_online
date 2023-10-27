@@ -27,7 +27,7 @@ const AnimeCatalog = () => {
         const fetchData = async () => {
             try {
                 console.log(`http://localhost:8000/v1/title_list?genres=${selectedGenres.join(",")}&q_filter=title,episode_count,genres,poster&limit=140`)
-                const response = await fetch(`http://localhost:8000/v1/title_list?genres=${selectedGenres.join(",")}&q_filter=title,episode_count,genres,poster,description&limit=35&offset=55`)
+                const response = await fetch(`https://apiv2-sepia.vercel.app/v1/title_list?genres=${selectedGenres.join(",")}&q_filter=title,episode_count,genres,poster,description&limit=35&offset=55`)
                 // const response = await fetch(`http://localhost:8000/all_anime/by_genres?genres=${selectedGenres.join(",")}&q_filter=title,episode_count,genres,poster&limit=140`)
                 const data = await response.json()
 

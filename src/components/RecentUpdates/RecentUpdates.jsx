@@ -12,7 +12,7 @@ const RecentUpdates = () => {
         setIsLoading(true)
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:8000/v1/title_list?q_filter=title,episode_count,genres,poster&limit=5&offset=35')
+                const response = await fetch('https://apiv2-sepia.vercel.app/v1/title_list?q_filter=title,episode_count,genres,poster&limit=5&offset=35')
                 const data = await response.json()
 
                 setAnime(data)
