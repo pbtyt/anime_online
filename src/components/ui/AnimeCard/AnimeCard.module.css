@@ -93,10 +93,14 @@
 
 
     .watchAnimeButton{
-        padding: 7px;
+        padding: 7px 15px;
     }
 
     .WatchListButton{
         display: none;
+    }
+
+    .animeGenres{
+        font-weight: 400;
     }
 }
