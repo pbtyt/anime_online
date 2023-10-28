@@ -1,6 +1,6 @@
 .animeCatalogWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    gap: 1rem;
+    justify-content: center;
 }

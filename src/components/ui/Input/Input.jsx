@@ -13,7 +13,7 @@ const Input = () => {
     if (event.key === "Enter")
     {
       console.log(searchValue)
-      navigate(`/search?query=${searchValue}`)
+      navigate(`/anime_online/search?query=${searchValue}`)
       setSearchValue("")
     }
   }

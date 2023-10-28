@@ -104,6 +104,8 @@
 
 @media screen and (min-width: 320px) and (max-width: 768px){
 	.profileWrapper{
+		flex-direction: column;
+		align-items: center;
 		padding: 10px;
 	}
 
@@ -113,5 +115,15 @@
 
 	.profileCard{
 		padding: 10px;
+		justify-content: center;
+		gap: 13px;
+	}
+
+	.profileLinks{
+		margin: 0;
+	}
+
+	.profileNickname{
+		padding: 0;
 	}
 }

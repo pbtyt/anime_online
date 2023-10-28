@@ -33,18 +33,30 @@ const SearchPage = () => {
     }, [searchQuery])
 
     return (
-        <div className={styles.animeCatalogWrapper}>
+        // TODO: Моежет как-то объеденить, чтобы не писать два условных рендера?
+        <>
             {
                 isLoading
-                    ? [...new Array(14)].map((_, index) => <AnimeCardSkeleton key={index}/>)
-                    : (anime.map((animeInfo, index) => (
-                    <AnimeCard
-                        key={index}
-                        animeInfo={animeInfo}
-                    />
-                )))
+                    ? <></>
+                    : <h3 style={{
+                        fontWeight: "500",
+                        textAlign: "center",
+                        marginBottom: "1.35rem"
+                    }} >Found: {anime.length} anime</h3>
             }
-        </div>
+            <div className={styles.animeCatalogWrapper}>
+                {
+                    isLoading
+                        ? [...new Array(14)].map((_, index) => <AnimeCardSkeleton key={index}/>)
+                        : (anime.map((animeInfo, index) => (
+                        <AnimeCard
+                            key={index}
+                            animeInfo={animeInfo}
+                        />
+                    )))
+                }
+            </div>
+        </>
     )
 }
 
