@@ -11,3 +11,10 @@
     padding: 15px 40px;
     margin: 5px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .buttonsWrapper{
+        display: grid;
+        grid-template-columns: 0fr 0fr;
+    }
+}

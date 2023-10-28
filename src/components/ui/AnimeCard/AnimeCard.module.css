@@ -34,16 +34,16 @@
 
 .animeEpisodesCount{
     color: #dbdbdb;
-    font-size: 10px;
+    font-size: .4rem;
     font-weight: 300;
     border-radius: 8px;
-    padding: 10px;
+    padding: 5px;
     background: rgba(76,76,76,.65);
 }
 
 .animeTitle{
     color: white;
-    font-size: 15px;
+    font-size: .6rem;
     font-weight: 400;
     letter-spacing: 1px;
 }
