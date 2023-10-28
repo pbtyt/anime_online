@@ -82,15 +82,15 @@ class Database():
     found_data = []
     for key in ordered_data:
       data = ordered_data.get(key)
-      if WRatio(title, data["title"]) >= 60:
-        found_data.append(data)
+      percentage = WRatio(title, data["title"]) 
+      if percentage >= 60:
+        found_data.append([data, percentage])
 
     print(f"[+]Time spent: {time.time()-start_time}")
-    return found_data
+    #Сейчас эта функция возвращает [{anime_data}, percentage] (надо как-нибудь изавиться от percentage без потери производительности)
+    return sorted(found_data, key=lambda x: x[1], reverse=True)
 
   def test():
     return db.child("anime").order_by_child("title").equal_to("Ван Пис").get().val()
 
 # dbase = Database()
-# print(dbase.search_anime("в", 0, 0, ""))
-

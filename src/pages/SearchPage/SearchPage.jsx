@@ -21,10 +21,12 @@ const SearchPage = () => {
             try{
                 const response = await fetch(`https://apiv2-sepia.vercel.app/v1/title/search?title=${searchQuery}&q_filter=title,poster,episode_count,genres&limit=0`)
                 const data = await response.json()
-
-                setAnime(data)
+                
+                setAnime( data.map(el => el[0]) ) //TODO:переделать это в api!!!
                 setIsLoading(false)
+
             } catch(error){
+                console.log(error)
                 console.log("Нет подключения")
             }
         }
