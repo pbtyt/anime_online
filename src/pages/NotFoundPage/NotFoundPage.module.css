@@ -39,7 +39,8 @@
     }
 
     .Wrapper{
-    	margin-top: 35vh;
+    	position: absolute;
+		top: 20%;
     	padding: 0px;
     }
 }
