@@ -14,10 +14,11 @@ const Popup = () => {
 		<div className={styles.popupWrapper}>
 
 			<div className={styles.popupContent}>
-				<div className={styles.contentWrapper}>
-					<span style={{color: "white"}}>
-						Title: {animeTitle}
-					</span>
+				<h3 className={styles.currentEditTitle}>
+					Current Edit Anime Title: {animeTitle}
+				</h3>
+
+				<div className={styles.dropdownsMenu}>
 					<DropDown
 						displayText='Status'
 						sectionsNames={["Watching", "Rewatching", "Completed", "Skipping"]}
@@ -29,6 +30,7 @@ const Popup = () => {
 				</div>
 
 			</div>
+
 
 		</div>
 	)

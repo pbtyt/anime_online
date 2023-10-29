@@ -5,6 +5,8 @@ import styles from './DropDown.module.css'
 
 import DefaultButton from '../DefaultButton/DefaultButton'
 
+import useLocalStorage from '../../../hooks/useLocalStorage' //!!!помещать по клику на menuItem в localStorage
+
 const DropDown = ( {displayText="None", sectionsNames = ["Menu1", "Menu2"]} ) => {
 	const [isOpen, setIsOpen] = useState(false)
 
@@ -16,7 +18,7 @@ const DropDown = ( {displayText="None", sectionsNames = ["Menu1", "Menu2"]} ) =>
 				<ul className={styles.menu}>
 					{
 						sectionsNames.map((sectionName, index) => (
-							<li className={styles.menuItem} key={index}>
+							<li className={styles.menuItem} onClick={()=>console.log(index)} key={index}>
 								<button>{sectionName}</button>
 							</li>		
 						))
