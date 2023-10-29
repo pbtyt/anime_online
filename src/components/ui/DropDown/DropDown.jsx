@@ -5,22 +5,22 @@ import styles from './DropDown.module.css'
 
 import DefaultButton from '../DefaultButton/DefaultButton'
 
-const DropDown = () => {
+const DropDown = ( {displayText="None", sectionsNames = ["Menu1", "Menu2"]} ) => {
 	const [isOpen, setIsOpen] = useState(false)
 
 	return (
 		<div className={styles.dropdown}>
-			<DefaultButton buttonText={"Folder"} onClick={()=>setIsOpen(!isOpen)}/>
+			<DefaultButton buttonText={ displayText } onClick={()=>setIsOpen(!isOpen)}/>
 
 			{isOpen && (
 				<ul className={styles.menu}>
-					<li className={styles.menuItem}>
-						<button>Menu1</button>
-					</li>
-
-					<li className={styles.menuItem}>
-						<button>Menu2</button>
-					</li>
+					{
+						sectionsNames.map((sectionName, index) => (
+							<li className={styles.menuItem} key={index}>
+								<button>{sectionName}</button>
+							</li>		
+						))
+					}
 				</ul>
 			)}
 		</div>

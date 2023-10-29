@@ -40,7 +40,12 @@
     background: #2d2d2d;
     color: #8c8c8c;
     padding-left: 0px;
+    transition: all 300ms ease;
     padding: 10px;
+}
+
+.yearInput:focus-within{
+    background: #222222;
 }
 
 .statusFilterWrapper{

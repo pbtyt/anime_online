@@ -1,15 +1,21 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styles from './AnimeCard.module.css'
+
+import { PopupContext } from '../../../providers/PopupProvider'
+
+import { BsFolderPlus } from 'react-icons/bs'
+
 //FOR TEST ONLY
 import kaguyaBG from '../../../assets/images/kaguya.webp'
 
 const AnimeCard = ({ animeInfo }) => {
+  const {setIsOpenPopup, setAnimeTitle} = useContext(PopupContext)
+
   return (
     <div className={styles.cardWrapper}>
         <img src={animeInfo.poster} style={{userSelect: "none"}}/>
         
         <div className={styles.animeInfoWrapper}>
-            <img className={styles.WatchListButton} src="/addToWatchlistIcon.svg" alt="icon"/>
             <h3 className={styles.animeEpisodesCount}>
               {animeInfo.episode_count} episodes
             </h3>
@@ -22,6 +28,10 @@ const AnimeCard = ({ animeInfo }) => {
             </h6>
 
             <button className={styles.watchAnimeButton}>Watch</button>
+            <BsFolderPlus
+              className={styles.WatchListButton}
+              onClick={()=>{setIsOpenPopup(true); setAnimeTitle(animeInfo.title)}}
+            />
         </div>
     </div>
   )

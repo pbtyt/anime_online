@@ -1,17 +1,35 @@
-import React from 'react'
-import { useState } from 'react'
-
+import React, {useContext, useRef, useEffect} from 'react'
 import styles from './Popup.module.css'
 
+import { PopupContext } from '../../providers/PopupProvider'
+
 import DropDown from '../ui/DropDown/DropDown'
+import { GrFormClose } from 'react-icons/gr'
+import CancelButton from '../ui/CancelButton/CancelButton'
 
 const Popup = () => {
-	const [isOpen, setIsOpen] = useState(true)
-	return isOpen && (
+	const {isOpenPopup, setIsOpenPopup, animeTitle} = useContext(PopupContext)
+
+	return isOpenPopup && (
 		<div className={styles.popupWrapper}>
+
 			<div className={styles.popupContent}>
-				<DropDown/>
+				<div className={styles.contentWrapper}>
+					<span style={{color: "white"}}>
+						Title: {animeTitle}
+					</span>
+					<DropDown
+						displayText='Status'
+						sectionsNames={["Watching", "Rewatching", "Completed", "Skipping"]}
+					/>
+					<DropDown
+						displayText='Rating'
+						sectionsNames={["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]}
+					/>
+				</div>
+
 			</div>
+
 		</div>
 	)
 }

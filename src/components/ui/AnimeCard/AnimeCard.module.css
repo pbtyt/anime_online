@@ -67,11 +67,12 @@
 }
 
 .WatchListButton{
-    position: absolute;
-    cursor: pointer;
-    right: 5px;
-
     user-select: none;
+    color: white;
+    width: 26px;
+    height: 26px;
+    margin-top: 15%;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px){
