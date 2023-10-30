@@ -18,7 +18,7 @@ const DropDown = ( {displayText="None", sectionsNames = ["Menu1", "Menu2"]} ) =>
 				<ul className={styles.menu}>
 					{
 						sectionsNames.map((sectionName, index) => (
-							<li className={styles.menuItem} onClick={()=>console.log(index)} key={index}>
+							<li className={styles.menuItem} onClick={()=>setIsOpen(false)} key={index}>
 								<button>{sectionName}</button>
 							</li>		
 						))
