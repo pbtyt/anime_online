@@ -2,14 +2,16 @@ import React, {useContext, useRef, useEffect} from 'react'
 import styles from './Popup.module.css'
 
 import { PopupContext } from '../../providers/PopupProvider'
-
 import DropDown from '../ui/DropDown/DropDown'
-import { GrFormClose } from 'react-icons/gr'
-import CancelButton from '../ui/CancelButton/CancelButton'
+
 import DefaultButton from '../ui/DefaultButton/DefaultButton'
 
+import useLocalStorage from '../../hooks/useLocalStorage'
+
 const Popup = () => {
-	const {isOpenPopup, setIsOpenPopup, animeTitle} = useContext(PopupContext)
+	
+	const {isOpenPopup, setIsOpenPopup, animeTitle, localStorageData} = useContext(PopupContext)
+	const { removeValue, setValue } = useLocalStorage(animeTitle, {})
 
 	return isOpenPopup && (
 		<div className={styles.popupWrapper}>
@@ -28,6 +30,11 @@ const Popup = () => {
 						displayText='Rating'
 						sectionsNames={["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]}
 					/>
+				</div>
+				
+				<div className={styles.buttons}>
+					<DefaultButton buttonText={"Cancel"} onClick={()=>{setIsOpenPopup(false); removeValue()}}/>
+					<DefaultButton buttonText={"Save"} onClick={()=>{ setIsOpenPopup(false); setValue(localStorageData) }}/>
 				</div>
 			</div>
 		</div>

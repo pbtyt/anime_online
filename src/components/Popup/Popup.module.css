@@ -16,6 +16,7 @@
 }
 
 .popupContent{
+	position: relative;
 	padding: 1rem;
 
 	width: 60%;
@@ -39,6 +40,23 @@
 .currentEditTitle{
 	font-weight: 500;
 	color: white;
+}
+
+.buttons{
+	width: 100%;
+
+	position: absolute;
+	bottom: 16px;
+	left: 0;
+
+	padding: 0 16px;
+
+	display: flex;
+	gap: 1.34rem;
+}
+
+.buttons button{
+	flex-grow: 1;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px){

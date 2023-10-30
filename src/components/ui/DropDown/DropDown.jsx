@@ -1,14 +1,15 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import styles from './DropDown.module.css'
 
 import DefaultButton from '../DefaultButton/DefaultButton'
 
-import useLocalStorage from '../../../hooks/useLocalStorage' //!!!помещать по клику на menuItem в localStorage
+import { PopupContext } from '../../../providers/PopupProvider'
 
 const DropDown = ( {displayText="None", sectionsNames = ["Menu1", "Menu2"]} ) => {
+
 	const [isOpen, setIsOpen] = useState(false)
+	const { animeTitle, setLocalStorageData } = useContext(PopupContext)
 
 	return (
 		<div className={styles.dropdown}>
@@ -18,7 +19,25 @@ const DropDown = ( {displayText="None", sectionsNames = ["Menu1", "Menu2"]} ) =>
 				<ul className={styles.menu}>
 					{
 						sectionsNames.map((sectionName, index) => (
-							<li className={styles.menuItem} onClick={()=>setIsOpen(false)} key={index}>
+							// !TODO: localStorage
+							<li className={styles.menuItem}
+								onClick={()=>{
+									setLocalStorageData(
+										() => {
+											const item = window.localStorage.getItem(animeTitle)
+											console.log(item)
+											if (item)
+												return { ...JSON.parse(item), ...{[displayText]: sectionName} }
+											else
+												return {[displayText]: sectionName}
+										}
+									);
+									
+									setIsOpen(false);
+								}}
+							
+								key={index}
+							>
 								<button>{sectionName}</button>
 							</li>		
 						))

@@ -12,8 +12,12 @@ function useLocalStorage(key, initialValue){
         setStoredValue(value)
         window.localStorage.setItem(key, JSON.stringify(value))
     }, [key])
+    
+    const removeValue = useCallback(()=>{
+        window.localStorage.removeItem(key)
+    }, [key])
 
-    return {storedValue, setValue}
+    return {storedValue, setValue, removeValue}
 }
 
 export default useLocalStorage
