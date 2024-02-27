@@ -19,7 +19,7 @@ const ProfilePage = () => {
             <img src={icon} alt="avatar" className={styles.profileIcon}/>
             <h4 className={styles.profileNickname}>Bladee</h4>
             <div className={styles.profileRole}>
-              <h5>Administrator</h5>
+              <h5>Strongest Developer Alive</h5>
             </div>
             <div className={styles.profileLinks}>
               <div className={styles.profileLinkButton}>
